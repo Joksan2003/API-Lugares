@@ -1,3 +1,4 @@
 node_modules
 
 firebaseKey.json
+.DS_Store
