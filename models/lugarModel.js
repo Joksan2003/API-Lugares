@@ -13,16 +13,16 @@ const getById = async (id) => {
 };
 
 // Crear nuevo lugar
-const create = async (Titulo, Descripcion, UrlImg, categoria, address, phone, hours) => {
-  const newLugar = { Titulo, Descripcion, UrlImg, categoria, address, phone, hours };
+const create = async (Titulo, Descripcion, UrlImgList, categoria, address, phone, hours) => {
+  const newLugar = { Titulo, Descripcion, UrlImgList, categoria, address, phone, hours };
   const docRef = await lugarCollection.add(newLugar);
   return { id: docRef.id, ...newLugar };
 };
 
 // Actualizar un lugar
-const update = async (id, Titulo, Descripcion, UrlImg, categoria, address, phone, hours) => {
+const update = async (id, Titulo, Descripcion, UrlImgList, categoria, address, phone, hours) => {
   const lugarRef = lugarCollection.doc(id);
-  await lugarRef.update({ Titulo, Descripcion, UrlImg, categoria, address, phone, hours });
+  await lugarRef.update({ Titulo, Descripcion, UrlImgList, categoria, address, phone, hours });
   const updated = await lugarRef.get();
   return { id, ...updated.data() };
 };

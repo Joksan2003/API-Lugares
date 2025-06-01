@@ -6,7 +6,7 @@ const typeDefs = gql`
         id: ID!
         Titulo: String!
         Descripcion: String!
-        UrlImg: String!
+        UrlImgList: [String!]!
         categoria: String!
         address: String
         phone: String
@@ -24,7 +24,7 @@ const typeDefs = gql`
         createLugar(
             Titulo: String!
             Descripcion: String!
-            UrlImg: String!
+            UrlImgList: [String!]!
             categoria: String!
             address: String
             phone: String
@@ -35,7 +35,7 @@ const typeDefs = gql`
             id: ID!
             Titulo: String!
             Descripcion: String!
-            UrlImg: String!
+            UrlImgList: [String!]!
             categoria: String!
             address: String
             phone: String

@@ -7,11 +7,11 @@ const resolvers = {
     },
 
     Mutation: {
-        createLugar: async (_, { Titulo, Descripcion, UrlImg, categoria, address, phone, hours }) =>
-            await lugarModel.create(Titulo, Descripcion, UrlImg, categoria, address, phone, hours),
+        createLugar: async (_, { Titulo, Descripcion, UrlImgList, categoria, address, phone, hours }) =>
+            await lugarModel.create(Titulo, Descripcion, UrlImgList, categoria, address, phone, hours),
         
-        updateLugar: async (_, { id, Titulo, Descripcion, UrlImg, categoria, address, phone, hours }) =>
-            await lugarModel.update(id, Titulo, Descripcion, UrlImg, categoria, address, phone, hours),
+        updateLugar: async (_, { id, Titulo, Descripcion, UrlImgList, categoria, address, phone, hours }) =>
+            await lugarModel.update(id, Titulo, Descripcion, UrlImgList, categoria, address, phone, hours),
         
         deleteLugar: async (_, { id }) => await lugarModel.remove(id),
 }
